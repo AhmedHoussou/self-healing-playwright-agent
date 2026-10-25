@@ -1,0 +1,25 @@
+{
+  "name": "the-self-healing-e2e-test-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "tsx src/generatePatch.ts"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@google/genai": "^2.31.0",
+    "@playwright/test": "^1.64.1",
+    "dotenv": "^18.0.9",
+    "zod": "^4.6.7"
+  }
+}

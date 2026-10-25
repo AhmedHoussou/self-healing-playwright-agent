@@ -1,0 +1,20 @@
+[
+  {
+    "originalSelector": "#coupon-code",
+    "healedSelector": "#promo-input-v3",
+    "intent": "Input field for entering a discount or promo code",
+    "action": "fill",
+    "reasoning": "The failed selector '#coupon-code' no longer exists. The DOM now contains an input with id 'promo-input-v3' and name 'discountCode', which directly matches the intent of entering a discount or promo code.",
+    "confidence": 0.95,
+    "timestamp": "2026-10-25T12:51:11.334Z"
+  },
+  {
+    "originalSelector": "#old-checkout-btn",
+    "healedSelector": "#btn-submit-order-v2",
+    "intent": "Button to submit and confirm the order",
+    "action": "click",
+    "reasoning": "The new button has an updated ID 'btn-submit-order-v2' and text indicating order confirmation, matching the user intent to submit and confirm the order.",
+    "confidence": 0.99,
+    "timestamp": "2026-10-25T12:51:14.652Z"
+  }
+]

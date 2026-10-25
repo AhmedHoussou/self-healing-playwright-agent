@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout Demo</title>
+  <style>
+    body { font-family: sans-serif; margin: 40px; background: #f8f9fa; }
+    .card { background: white; border: 1px solid #ddd; padding: 24px; border-radius: 8px; max-width: 420px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .field { margin-bottom: 16px; }
+    label { display: block; font-weight: bold; margin-bottom: 6px; }
+    input { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+    .primary-btn { background: #0070f3; color: white; padding: 10px 16px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; width: 100%; }
+    .primary-btn:hover { background: #005bb5; }
+    .success { color: #0d8a2e; font-weight: bold; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Checkout Order #1042</h2>
+    
+    <div class="field">
+      <label for="promo-input-v3">Discount Code</label>
+      <!-- Original selector was #coupon-code. Refactored ID and name: -->
+      <input id="promo-input-v3" name="discountCode" placeholder="Enter coupon code" />
+    </div>
+
+    <!-- Original selector was #old-checkout-btn. Refactored: -->
+    <button id="btn-submit-order-v2" class="primary-btn" role="button">
+      Apply &amp; Confirm ($49.99)
+    </button>
+
+    <p id="order-status"></p>
+  </div>
+
+  <script>
+    document.getElementById('btn-submit-order-v2').addEventListener('click', () => {
+      const promo = document.getElementById('promo-input-v3').value;
+      const status = document.getElementById('order-status');
+      status.className = 'success';
+      status.textContent = promo ? `Order placed with code "${promo}"!` : 'Order Placed Successfully!';
+    });
+  </script>
+</body>
+</html>
