@@ -6,7 +6,8 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
-    "report": "tsx src/generatePatch.ts"
+    "report": "tsx src/generatePatch.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "type": "commonjs",
